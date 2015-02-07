@@ -12,6 +12,12 @@ class MainNavControllerView: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear (animated: Bool)  {
+        super.viewDidAppear(animated);
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let questionNavController = storyboard.instantiateViewControllerWithIdentifier("questionNavController") as QuestionNavigationViewController
         
@@ -25,7 +31,6 @@ class MainNavControllerView: UINavigationController {
             println("Question nav controller presented by root nav controller")
         }
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
